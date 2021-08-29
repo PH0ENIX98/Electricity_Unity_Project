@@ -8,30 +8,46 @@ public class Lighting : MonoBehaviour
     private RaycastHit2D m_Press;
     private GameObject m_Object;
     [SerializeField] bool m_On = true;
-   
-
+    public static int m_NoOfLitRooms = 0;
+    void Start()
+    {
+    }
     void Update()
     {
         m_Press = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         SwitchLight();
     }
-    //Con Code
-    void SwitchLight()
+    private void SwitchLight()
     {
         if (Input.GetMouseButtonUp(0))
         {
-            if (m_Press.collider.gameObject.tag == "Panel")
+            try
             {
-                var isLightOn = m_Press.collider.gameObject.GetComponent<Image>().enabled;
-                m_Press.collider.gameObject.GetComponent<Image>().enabled = !isLightOn;
+                if (m_Press.collider.gameObject.tag == "Panel")
+                {
 
+                    bool isLightOn = m_Press.collider.gameObject.GetComponent<Image>().enabled;
+                    m_Press.collider.gameObject.GetComponent<Image>().enabled = !isLightOn;
+                    if (isLightOn)
+                    {
+                        m_NoOfLitRooms = 1 + m_NoOfLitRooms;
+                    }
+                    else
+                    {
+                        m_NoOfLitRooms = m_NoOfLitRooms - 1;
+                    }
+                }
+
+                else
+                {
+                    Debug.Log("Wrong Object Pressed");
+                }
+            }
+            catch
+            {
+                Debug.Log("Wrong Object Pressed");
             }
         }
-    }
 
-    public GameObject m_SelectedRoom()
-    {
-        m_Object = m_Press.collider.gameObject;
-        return m_Object;
     }
 }

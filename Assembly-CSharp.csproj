@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Lighting.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
+    <Compile Include="Assets\Scripts\Restart.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
