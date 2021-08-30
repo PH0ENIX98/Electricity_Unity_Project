@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class Score : MonoBehaviour
         {
            
             scoreUI.enabled = true;
-            if (m_ScoreHit.collider != null)
+            if (m_ScoreHit.collider != null && !EventSystem.current.IsPointerOverGameObject())
             {
                var m_room = m_ScoreHit.collider.gameObject.GetComponent<Image>().enabled;
 
@@ -43,7 +44,7 @@ public class Score : MonoBehaviour
                 }
             }
         }
-        if (m_ScoreHit.collider != null)
+        if (m_ScoreHit.collider != null && !EventSystem.current.IsPointerOverGameObject())
         {
             var m_room1 = m_ScoreHit.collider.gameObject.GetComponent<Image>().enabled;
             if (m_multiplier!=0 && Time.timeSinceLevelLoad <= 15f)
