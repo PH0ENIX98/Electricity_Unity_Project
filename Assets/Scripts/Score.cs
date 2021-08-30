@@ -5,11 +5,11 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
-
-    private int displayScore = 0;
+    public static int displayScore = 0;
     private static int m_multiplier;
-    public Text scoreUI;
-    public Text m_amtUI;
+    [SerializeField] Text scoreUI;
+    [SerializeField] Text m_amtUI;
+    [SerializeField] Text m_InfoUI;
     [SerializeField] private Text m_ButtonText;
     private RaycastHit2D m_ScoreHit;
     private double m_amt;
@@ -19,12 +19,11 @@ public class Score : MonoBehaviour
 
     void Start()
     {
-
         m_amtPanel.gameObject.GetComponent<Image>().enabled = false;
         m_amtUI.enabled = false;
         m_Restart.gameObject.GetComponent<Image>().enabled = false;
         m_ButtonText.enabled = false;
-
+        m_InfoUI.enabled = false;
     }
     void Update()
     {
@@ -38,7 +37,7 @@ public class Score : MonoBehaviour
             {
                var m_room = m_ScoreHit.collider.gameObject.GetComponent<Image>().enabled;
 
-                if (m_room == false && Time.timeSinceLevelLoad <= 15f)
+                if (m_room == false && Time.timeSinceLevelLoad <= 15f && m_multiplier != 0)
                 {
                     StartCoroutine(ScoreUpdater());
                 }
@@ -63,7 +62,7 @@ public class Score : MonoBehaviour
     {
         displayScore=displayScore+m_multiplier;
         scoreUI.text = displayScore.ToString() + "W";
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         m_amt = displayScore * 0.2;
         m_amtUI.text = m_amt.ToString() + " AED is your electricity bill";
     }
@@ -74,6 +73,7 @@ public class Score : MonoBehaviour
         m_amtUI.enabled = true;
         m_Restart.GetComponent<Image>().enabled = true;
         m_ButtonText.enabled = true;
+        m_InfoUI.enabled = true;
     }
 
     public void mult()

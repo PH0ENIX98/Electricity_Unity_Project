@@ -7,7 +7,7 @@ public class Lighting : MonoBehaviour
 {
     private RaycastHit2D m_Press;
     private GameObject m_Object;
-    [SerializeField] bool m_On = true;
+   // [SerializeField] bool m_On = true;
     public static int m_NoOfLitRooms = 0;
     void Start()
     {
