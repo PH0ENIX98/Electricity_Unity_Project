@@ -9,9 +9,12 @@ public class Lighting : MonoBehaviour
     private GameObject m_Object;
    // [SerializeField] bool m_On = true;
     public static int m_NoOfLitRooms = 0;
+
     void Start()
     {
+
     }
+
     void Update()
     {
         m_Press = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -23,11 +26,11 @@ public class Lighting : MonoBehaviour
         {
             try
             {
-                if (m_Press.collider.gameObject.tag == "Panel")
+                if (m_Press.collider.gameObject.tag == "Room")
                 {
 
-                    bool isLightOn = m_Press.collider.gameObject.GetComponent<Image>().enabled;
-                    m_Press.collider.gameObject.GetComponent<Image>().enabled = !isLightOn;
+                    bool isLightOn = m_Press.collider.gameObject.GetComponent<SpriteRenderer>().enabled;
+                    m_Press.collider.gameObject.GetComponent<SpriteRenderer>().enabled = !isLightOn;
                     if (isLightOn)
                     {
                         m_NoOfLitRooms = 1 + m_NoOfLitRooms;

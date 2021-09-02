@@ -4,16 +4,17 @@ using System.Collections;
 
 public class Restart : MonoBehaviour
 {
-    public static int m_Power;
-    [SerializeField] private Score m_PowerWatt;
+   
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-    public void Score()
+    public void PauseGame()
     {
-        //m_Power = m_PowerWatt;
+        Time.timeScale = 0;
     }
-
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+    }
 }
