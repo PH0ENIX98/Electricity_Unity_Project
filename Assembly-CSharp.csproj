@@ -53,13 +53,14 @@
     <UnityVersion>2020.3.15f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\OnMouseOverColor.cs" />
-    <Compile Include="Assets\Scripts\Lighting.cs" />
+    <Compile Include="Assets\Scripts\StartScript.cs" />
+    <Compile Include="Assets\Scripts\MouseInput.cs" />
+    <Compile Include="Assets\RoomFunction.cs" />
+    <Compile Include="Assets\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\Restart.cs" />
     <Compile Include="Assets\Scripts\Appliance.cs" />
-    <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\TimerScript.cs" />
-    <Compile Include="Assets\Scripts\StartScript.cs" />
+    <Compile Include="Assets\Scripts\ScoreManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

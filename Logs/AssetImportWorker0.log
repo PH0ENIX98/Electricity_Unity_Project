@@ -15,11 +15,11 @@ C:/Users/Fajel's PC/Documents/GitHub/Electricity_Unity_Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57293
+58614
 Successfully changed project path to: C:/Users/Fajel's PC/Documents/GitHub/Electricity_Unity_Project
 C:/Users/Fajel's PC/Documents/GitHub/Electricity_Unity_Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 61.96 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 320.83 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.15f1 (5e502cb56e17)
 [Subsystems] Discovering subsystems at path E:/2020.3.15f1/Editor/Data/Resources/UnitySubsystems
@@ -34,5 +34,5 @@ Initialize mono
 Mono path[0] = 'E:/2020.3.15f1/Editor/Data/Managed'
 Mono path[1] = 'E:/2020.3.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'E:/2020.3.15f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56148
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56940
 Begin MonoManager ReloadAssembly

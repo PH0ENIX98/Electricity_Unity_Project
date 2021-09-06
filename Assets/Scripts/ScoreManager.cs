@@ -57,7 +57,6 @@ public class ScoreManager : MonoBehaviour
                 m_displayScore = (float)m_powerRate * Time.deltaTime;
                 m_totalAmount = m_powerRate * 0.23 * Time.deltaTime;
             }
-            Debug.Log(m_powerRate);
             scoreUI.text = m_displayScore.ToString("0.00") + "W";
             m_amtUI.text = m_totalAmount.ToString("0.00") + " AED";
             m_timeValue -= Time.deltaTime;
