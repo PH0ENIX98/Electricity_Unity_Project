@@ -55,8 +55,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\StartScript.cs" />
     <Compile Include="Assets\Scripts\MouseInput.cs" />
-    <Compile Include="Assets\RoomFunction.cs" />
-    <Compile Include="Assets\CharacterMovement.cs" />
+    <Compile Include="Assets\Scripts\RoomFunction.cs" />
+    <Compile Include="Assets\Scripts\CharacterMovement.cs" />
+    <Compile Include="Assets\Scripts\FactsManager.cs" />
     <Compile Include="Assets\Scripts\Restart.cs" />
     <Compile Include="Assets\Scripts\Appliance.cs" />
     <Compile Include="Assets\Scripts\TimerScript.cs" />
